@@ -11,17 +11,27 @@ public class Principal {
     public static void main(String[] args){
         Relogio rel1 = new Relogio();
         
-        rel1.setHora(Integer.parseInt(JOptionPane.showInputDialog("hora: ")));
-        rel1.setMinuto(Integer.parseInt(JOptionPane.showInputDialog("minuto: ")));
-        rel1.setSegundo(Integer.parseInt(JOptionPane.showInputDialog("segundos: ")));
+        int option = -1;
         
-        JOptionPane.showMessageDialog(null, rel1.getSegundos());
-        int tempo1 = rel1.getSegundo();
-        rel1.IncrementarSegundo();
-        int tempo2 = rel1.getSegundo();
-        JOptionPane.showMessageDialog(null, rel1.getSegundos());
-        JOptionPane.showMessageDialog(null, (tempo2 - tempo1));
-        
-        JOptionPane.showMessageDialog(null, rel1.getTempo());
+        while (option != 99){
+            
+            option = Integer.parseInt(JOptionPane.showInputDialog("Menu de Opções\n"
+                    + "1 - Setar Tempo\n"
+                    + "2 - Mostrar o tempo\n"
+                    + "3 - Tempo em segundos\n"
+                    + "99 - Sair"));
+            
+            if (option == 1){
+                rel1.setHora(Integer.parseInt(JOptionPane.showInputDialog("Digite a hora: ")));
+                rel1.setMinuto(Integer.parseInt(JOptionPane.showInputDialog("Digite a minuto: ")));
+                rel1.setSegundo(Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo: ")));
+            }
+            if (option == 2){
+                JOptionPane.showMessageDialog(null, rel1.getTempo());
+            }
+            if (option == 3){
+                JOptionPane.showMessageDialog(null, rel1.getSegundos());
+            }
+        }
     }
 }
