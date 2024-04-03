@@ -96,4 +96,8 @@ public class Relogio {
         }
     }
     
+    public String getTempo(){
+        return (getHora() + ":" + getMinuto() + ":" + getSegundo());
+    }
+    
 }

@@ -21,5 +21,7 @@ public class Principal {
         int tempo2 = rel1.getSegundo();
         JOptionPane.showMessageDialog(null, rel1.getSegundos());
         JOptionPane.showMessageDialog(null, (tempo2 - tempo1));
+        
+        JOptionPane.showMessageDialog(null, rel1.getTempo());
     }
 }
