@@ -59,7 +59,7 @@ public class Relogio {
     }
     
     public void IncrementarHora(){
-        if (getHora() + 1 == 60){
+        if (getHora() + 1 == 24){
             setHora(0);
         } else{
             setHora(getHora() + 1);
