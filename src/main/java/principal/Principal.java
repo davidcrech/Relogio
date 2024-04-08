@@ -38,7 +38,8 @@ public class Principal {
                         + "1 - Aumentar segundos\n"
                         + "2 - Aumentar minutos\n"
                         + "3 - Aumentar horas\n"
-                        + "23 - Voltar"));
+                        +"23 - Voltar"
+                        +"24 - aleatorio")) ;
                     if (optionAlt == 1){
                         rel1.IncrementarSegundo();
                     }
